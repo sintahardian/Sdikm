@@ -1,0 +1,7 @@
+primary color        : 500 = #4caf50
+dark primary color   : 700 = #087f23
+color accent         : 200 = #80e27e
+off white background = #e8f5e9
+
+pink accent 100% = #f50057
+pink accent 50%  = f73378

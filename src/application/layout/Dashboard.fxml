@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="592.0" prefWidth="848.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DashboardController">
+   <children>
+      <VBox layoutX="212.0" layoutY="194.0" prefHeight="242.0" prefWidth="419.0" spacing="40.0">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <JFXButton fx:id="btnPenilaian" buttonType="RAISED" onAction="#gotoPenilaian" prefHeight="100.0" prefWidth="188.0" style="-fx-background-color: green;" text="Penilaian" textFill="WHITE" />
+                  <JFXButton fx:id="btnSurat" buttonType="RAISED" layoutX="10.0" layoutY="10.0" onAction="#gotoSurat" prefHeight="100.0" prefWidth="188.0" style="-fx-background-color: green;" text="Surat" textFill="WHITE" />
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0" spacing="40.0">
+               <children>
+                  <JFXButton fx:id="btnTambahData" buttonType="RAISED" onAction="#gotoTambahData" prefHeight="100.0" prefWidth="188.0" style="-fx-background-color: green;" text="Tambah Data" textFill="WHITE" />
+                  <JFXButton fx:id="btnLaporan" buttonType="RAISED" onAction="#gotoLaporan" prefHeight="100.0" prefWidth="188.0" style="-fx-background-color: green;" text="Laporan" textFill="WHITE" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <JFXButton fx:id="btnKeluar" buttonType="RAISED" layoutX="731.0" layoutY="30.0" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: red;" text="keluar" textFill="WHITE" />
+   </children>
+</AnchorPane>

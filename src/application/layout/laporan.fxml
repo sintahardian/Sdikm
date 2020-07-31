@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <JFXButton buttonType="RAISED" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: red;" text="keluar" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0" />
+      <TabPane prefHeight="481.0" prefWidth="734.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
+         <tabs>
+            <Tab text="Data Guru">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="184.0" layoutY="399.0" prefHeight="34.0" prefWidth="201.0" />
+                        <TableView layoutX="5.0" layoutY="44.0" prefHeight="355.0" prefWidth="960.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                           <columns>
+                              <TableColumn prefWidth="39.0" text="Id" />
+                              <TableColumn prefWidth="111.0" text="Nama" />
+                              <TableColumn prefWidth="75.0" text="NIK" />
+                              <TableColumn prefWidth="128.33334350585938" text="Telepon" />
+                              <TableColumn prefWidth="198.66665649414062" text="jabatan" />
+                              <TableColumn prefWidth="213.99996948242188" text="Alamat" />
+                              <TableColumn prefWidth="179.33334350585938" text="Tanggal bergabung" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" layoutX="864.0" layoutY="391.0" prefHeight="51.0" prefWidth="88.0" spacing="40.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Print" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Data Surat Masuk">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="184.0" layoutY="399.0" prefHeight="34.0" prefWidth="201.0" />
+                        <TableView layoutX="5.0" layoutY="44.0" prefHeight="355.0" prefWidth="960.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                           <columns>
+                              <TableColumn prefWidth="39.0" text="Id" />
+                              <TableColumn prefWidth="207.00001525878906" text="Nomer Surat" />
+                              <TableColumn prefWidth="425.99998474121094" text="Keterangan" />
+                              <TableColumn prefWidth="267.3333282470703" text="tanggal" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" layoutX="864.0" layoutY="391.0" prefHeight="51.0" prefWidth="88.0" spacing="40.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Print" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Data Surat Keluar">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="184.0" layoutY="399.0" prefHeight="34.0" prefWidth="201.0" />
+                        <TableView layoutX="5.0" layoutY="44.0" prefHeight="355.0" prefWidth="960.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                           <columns>
+                              <TableColumn prefWidth="39.0" text="Id" />
+                              <TableColumn prefWidth="207.00001525878906" text="Nomer Surat" />
+                              <TableColumn prefWidth="425.99998474121094" text="Keterangan" />
+                              <TableColumn prefWidth="267.3333282470703" text="tanggal" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" layoutX="864.0" layoutY="391.0" prefHeight="51.0" prefWidth="88.0" spacing="40.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Print" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+            <Tab text="Data Penilaian">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="184.0" layoutY="399.0" prefHeight="34.0" prefWidth="201.0" />
+                        <TableView layoutX="5.0" layoutY="44.0" prefHeight="355.0" prefWidth="960.0" AnchorPane.bottomAnchor="77.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="60.0">
+                           <columns>
+                              <TableColumn prefWidth="39.0" text="Id" />
+                              <TableColumn prefWidth="111.0" text="Nama" />
+                              <TableColumn prefWidth="75.0" text="NIK" />
+                              <TableColumn prefWidth="198.66665649414062" text="jabatan" />
+                              <TableColumn prefWidth="198.66665649414062" text="Hasil Penilaian" />
+                           </columns>
+                        </TableView>
+                        <HBox alignment="CENTER_LEFT" layoutX="864.0" layoutY="391.0" prefHeight="51.0" prefWidth="88.0" spacing="40.0" AnchorPane.rightAnchor="20.0">
+                           <children>
+                              <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Print" textFill="WHITE" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
