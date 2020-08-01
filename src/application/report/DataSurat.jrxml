@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DataSurat" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AdapterDua"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from sdikm.surat]]>
+	</queryString>
+	<field name="idsurat" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="idsurat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="surat"/>
+	</field>
+	<field name="nomersurat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="nomersurat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="surat"/>
+	</field>
+	<field name="jenissurat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="jenissurat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="surat"/>
+	</field>
+	<field name="keterangansurat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="keterangansurat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="surat"/>
+	</field>
+	<field name="tanggalsurat" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="tanggalsurat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="surat"/>
+	</field>
+	<title>
+		<band height="129" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="80" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<image>
+				<reportElement x="0" y="0" width="80" height="80" uuid="d6adbc18-eb0b-42ec-b89a-f68cb2cb663c"/>
+				<imageExpression><![CDATA["logo-big.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="95" y="0" width="210" height="25" uuid="d709bee4-0644-435e-a06c-37b5c36b4e6d">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SD Islam Karya Mukti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="25" width="205" height="45" uuid="a870f307-9cf7-4384-b968-15388df75a79"/>
+				<text><![CDATA[Jl. Raya Mayor Oking Jaya Atmaja No.137, Karang Asem Bar., Kec. Citeureup, Bogor, Jawa Barat 16810]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="163" y="90" width="228" height="30" uuid="d4a27109-f5ab-46b8-9ec7-f87716e255c0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Data Keseluruhan Surat ]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="20">
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="0" y="0" width="111" height="20" forecolor="#000000" uuid="25f58294-f4e9-47d8-a86b-068727599563">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25d4dcb1-2d5d-4dfd-a46a-16fb718870da"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nomer Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="140" y="0" width="111" height="20" forecolor="#000000" uuid="4701d50e-56d6-4fc1-9aae-fd8cd53703c1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d083f33-e026-4287-824f-92a300fa8e24"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jenis Surat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="280" y="0" width="111" height="20" forecolor="#000000" uuid="e0b59d2b-4eb9-48db-9963-a579282dcdf1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bbd8e45-14c2-4ad3-a038-32576b708e39"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Keterangan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" positionType="Float" x="444" y="0" width="111" height="20" forecolor="#000000" uuid="49ddfb1b-b825-4821-9634-c2bf3374eba0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30d556b9-8072-42df-9d63-c24d4a3971af"/>
+				</reportElement>
+				<textElement>
+					<font fontName="Arial" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="0" y="0" width="111" height="20" uuid="0a49c0e5-4d43-4ae3-b645-f2ba6a555b38">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="25d4dcb1-2d5d-4dfd-a46a-16fb718870da"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nomersurat}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="140" y="0" width="111" height="20" uuid="983ed236-17d5-4e11-a019-277a747a5dbe">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="3d083f33-e026-4287-824f-92a300fa8e24"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jenissurat}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="280" y="0" width="111" height="20" uuid="7efd599a-ff52-4254-9ae7-51b8da1b5ee6">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1bbd8e45-14c2-4ad3-a038-32576b708e39"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{keterangansurat}]]></textFieldExpression>
+			</textField>
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
+				<reportElement style="Detail" positionType="Float" x="444" y="0" width="111" height="20" uuid="d8517fc4-36de-4f73-bbf7-5ba8b6181102">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="30d556b9-8072-42df-9d63-c24d4a3971af"/>
+				</reportElement>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tanggalsurat}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band height="177">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="147" width="556" height="30" backcolor="#E6E8E9" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SD Islam Karya Mukti]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>

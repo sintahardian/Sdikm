@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.13.0.final using JasperReports Library version 6.13.0-46ada4d1be8f3c5985fd0b6146f3ed44caed6f05  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Invoice_1" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4eedbb89-b4f6-4469-9ab6-f642a1688cf7">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="AdapterDua"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#EEEFF0"/>
+		</conditionalStyle>
+	</style>
+	<style name="Table">
+		<box>
+			<pen lineWidth="1.0" lineColor="#000000"/>
+			<topPen lineWidth="1.0" lineColor="#000000"/>
+			<leftPen lineWidth="1.0" lineColor="#000000"/>
+			<bottomPen lineWidth="1.0" lineColor="#000000"/>
+			<rightPen lineWidth="1.0" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_CH" mode="Opaque" backcolor="#CACED0">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+	</style>
+	<style name="Table_TD" mode="Opaque" backcolor="#FFFFFF">
+		<box>
+			<pen lineWidth="0.5" lineColor="#000000"/>
+			<topPen lineWidth="0.5" lineColor="#000000"/>
+			<leftPen lineWidth="0.5" lineColor="#000000"/>
+			<bottomPen lineWidth="0.5" lineColor="#000000"/>
+			<rightPen lineWidth="0.5" lineColor="#000000"/>
+		</box>
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style backcolor="#D8D8D8"/>
+		</conditionalStyle>
+	</style>
+	<subDataset name="tableDataset" uuid="f13e6d36-5148-4ecc-bbe3-3035def80980">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+	</subDataset>
+	<queryString language="SQL">
+		<![CDATA[select * from sdikm.dataguru]]>
+	</queryString>
+	<field name="iddataguru" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.label" value="iddataguru"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurunama" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datagurunama"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurunik" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datagurunik"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurutelepon" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datagurutelepon"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurujabatan" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datagurujabatan"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurualamat" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.label" value="datagurualamat"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<field name="datagurujoin" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.label" value="datagurujoin"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="dataguru"/>
+	</field>
+	<group name="Gruppo1">
+		<groupExpression><![CDATA[$F{iddataguru}]]></groupExpression>
+		<groupHeader>
+			<band height="21">
+				<textField>
+					<reportElement x="110" y="0" width="100" height="20" uuid="71c181c1-1652-430d-a8ec-b13786aa5c60"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{datagurunama}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="0" y="0" width="100" height="20" uuid="1e1eda42-2f0e-4077-8764-7a5e034e6c8f"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{datagurunik}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="220" y="0" width="100" height="20" uuid="e2a06905-c49c-4888-a055-a3d171314732"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{datagurujabatan}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="330" y="0" width="100" height="20" uuid="f2b8be81-ea8e-440e-9efa-dabd3a07a26f"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{datagurualamat}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement x="435" y="0" width="100" height="20" uuid="656f87d7-844a-486c-a714-39e03072061a"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression><![CDATA[$F{datagurujoin}]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band>
+				<property name="local_mesure_unitheight" value="pixel"/>
+				<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			</band>
+		</groupFooter>
+	</group>
+	<group name="datagurunama">
+		<groupExpression><![CDATA[$F{datagurunama}]]></groupExpression>
+	</group>
+	<group name="datagurunik">
+		<groupExpression><![CDATA[$F{datagurunik}]]></groupExpression>
+	</group>
+	<group name="datagurutelepon">
+		<groupExpression><![CDATA[$F{datagurutelepon}]]></groupExpression>
+	</group>
+	<group name="datagurujabatan">
+		<groupExpression><![CDATA[$F{datagurujabatan}]]></groupExpression>
+	</group>
+	<group name="datagurualamat">
+		<groupExpression><![CDATA[$F{datagurualamat}]]></groupExpression>
+	</group>
+	<group name="datagurujoin">
+		<groupExpression><![CDATA[$F{datagurujoin}]]></groupExpression>
+	</group>
+	<title>
+		<band height="134" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="80" width="556" height="1" uuid="806ce5df-1219-4876-ae0c-ca7405b1f246">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+			</line>
+			<staticText>
+				<reportElement x="95" y="0" width="210" height="25" uuid="e622555d-198b-4ccd-a4a1-c59c53304058">
+					<property name="local_mesure_unitheight" value="pixel"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<textElement>
+					<font size="19" isBold="true"/>
+				</textElement>
+				<text><![CDATA[SD Islam Karya Mukti]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="95" y="25" width="205" height="45" uuid="c226e44d-3bb5-4145-b0b3-903bf1d79fde"/>
+				<text><![CDATA[Jl. Raya Mayor Oking Jaya Atmaja No.137, Karang Asem Bar., Kec. Citeureup, Bogor, Jawa Barat 16810]]></text>
+			</staticText>
+			<image>
+				<reportElement x="0" y="0" width="80" height="80" uuid="10cf4dea-a396-4303-ac0a-341c19eea5cf"/>
+				<imageExpression><![CDATA["logo-big.png"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="227" y="90" width="100" height="30" uuid="3673bca5-89a0-4693-93b0-266483359647"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Data Guru]]></text>
+			</staticText>
+		</band>
+	</title>
+	<columnHeader>
+		<band height="35">
+			<staticText>
+				<reportElement x="0" y="10" width="50" height="15" uuid="a4846dee-9f1b-4c8a-82f3-debd07d218ee"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NIK]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="110" y="10" width="50" height="15" uuid="4fd84eb8-9eca-4187-8e9b-f675b82e3a38"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nama]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="220" y="10" width="50" height="15" uuid="122bb606-465b-4aa9-8888-44946f6dcbda"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Jabatan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="10" width="50" height="15" uuid="72536b13-0a56-4684-a4ba-9c92f7363c21"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Alamat]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="440" y="10" width="90" height="15" uuid="89990781-7444-421b-88bf-372446815e84"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Tanggal gabung]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20"/>
+	</detail>
+	<lastPageFooter>
+		<band height="177">
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="0" y="147" width="556" height="30" backcolor="#E6E8E9" uuid="36aa233d-4305-48e6-974a-1bbf89bb3c8f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Serif" size="9" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[SD Islam Karya Mukti]]></text>
+			</staticText>
+		</band>
+	</lastPageFooter>
+</jasperReport>
