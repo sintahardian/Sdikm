@@ -1,13 +1,20 @@
 package application.controller;
 
 import java.net.URL;
+import static javafx.fxml.FXMLLoader.load;
+
 import java.util.ResourceBundle;
 
 import com.jfoenix.controls.JFXButton;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
 public class DashboardController implements Initializable{
 	@FXML
@@ -43,23 +50,39 @@ public class DashboardController implements Initializable{
 
     @FXML
     void gotoSurat(ActionEvent event) {
+    	System.out.println("ok");
+        try {
+            ((Node)event.getSource()).getScene().getWindow().hide();
+            Stage primaryStage = new Stage();
 
+            Parent root = load(getClass().getResource("../layout/surat.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     @FXML
     void gotoTambahData(ActionEvent event) {
+    	System.out.println("ok");
+        try {
+            ((Node)event.getSource()).getScene().getWindow().hide();
+            Stage primaryStage = new Stage();
 
+            Parent root = load(getClass().getResource("../layout/tambahdata.fxml"));
+            Scene scene = new Scene(root);
+            primaryStage.setScene(scene);
+            primaryStage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
     }
    
 
 	@Override
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		assert btnPenilaian != null : "fx:id=\"btnPenilaian\" was not injected: check your FXML file 'Dashboard.fxml'.";
-        assert btnSurat != null : "fx:id=\"btnSurat\" was not injected: check your FXML file 'Dashboard.fxml'.";
-        assert btnTambahData != null : "fx:id=\"btnTambahData\" was not injected: check your FXML file 'Dashboard.fxml'.";
-        assert btnLaporan != null : "fx:id=\"btnLaporan\" was not injected: check your FXML file 'Dashboard.fxml'.";
-        assert btnKeluar != null : "fx:id=\"btnKeluar\" was not injected: check your FXML file 'Dashboard.fxml'.";
 		
 	}
 }

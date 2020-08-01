@@ -14,10 +14,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.SuratController">
    <children>
-      <JFXButton buttonType="RAISED" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: red;" text="keluar" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0" />
+      <JFXButton fx:id="btnKeluar" buttonType="RAISED" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: red;" text="keluar" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0" />
       <TabPane prefHeight="481.0" prefWidth="734.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
          <tabs>
             <Tab text="Data Surat">
@@ -29,25 +28,25 @@
                               <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="428.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Nomer Surat" wrappingWidth="135.5234375" />
-                                    <JFXTextField prefHeight="25.0" prefWidth="208.0" />
+                                    <JFXTextField fx:id="nomersurat" prefHeight="25.0" prefWidth="208.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="43.0" prefHeight="33.0" prefWidth="523.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Jenis Surat" wrappingWidth="135.5234375" />
-                                    <JFXComboBox prefHeight="25.0" prefWidth="208.0" />
+                                    <JFXComboBox fx:id="jenissurat" prefHeight="25.0" prefWidth="208.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="109.0" prefHeight="33.0" prefWidth="523.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Keterangan" wrappingWidth="137.5234375" />
-                                    <JFXTextArea prefHeight="35.0" prefWidth="209.0" />
+                                    <JFXTextArea fx:id="keterangan" prefHeight="35.0" prefWidth="209.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="142.0" prefHeight="33.0" prefWidth="523.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tanggal" wrappingWidth="134.5234375" />
-                                    <JFXDatePicker prefHeight="28.0" prefWidth="211.0" />
+                                    <JFXDatePicker fx:id="tanggalsurat" prefHeight="28.0" prefWidth="211.0" />
                                  </children>
                               </HBox>
                            </children>
@@ -56,7 +55,7 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="40.0">
                                  <children>
-                                    <JFXButton buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Save" textFill="WHITE" />
+                                    <JFXButton fx:id="btnSaveSurat" buttonType="RAISED" prefHeight="25.0" prefWidth="84.0" style="-fx-background-color: green;" text="Save" textFill="WHITE" />
                                     <JFXButton buttonType="RAISED" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="95.0" style="-fx-background-color: green;" text="Edit" textFill="WHITE" />
                                  </children>
                               </HBox>
@@ -68,15 +67,13 @@
                               </HBox>
                            </children>
                         </VBox>
-                        <TableView layoutX="351.0" layoutY="44.0" prefHeight="412.0" prefWidth="545.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
+                        <TableView fx:id="tablesurat" layoutX="351.0" layoutY="44.0" prefHeight="412.0" prefWidth="545.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="420.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="21.0">
                            <columns>
-                              <TableColumn prefWidth="39.0" text="Id" />
-                              <TableColumn prefWidth="111.0" text="Nama" />
-                              <TableColumn prefWidth="75.0" text="NIK" />
-                              <TableColumn prefWidth="75.0" text="Telepon" />
-                              <TableColumn prefWidth="75.0" text="jabatan" />
-                              <TableColumn prefWidth="75.0" text="Alamat" />
-                              <TableColumn prefWidth="75.0" text="Tanggal bergabung" />
+                              <TableColumn fx:id="columnidsurat" prefWidth="39.0" text="Id" />
+                              <TableColumn fx:id="columnnomersurat" prefWidth="134.33331298828125" text="Nomer Surat" />
+                              <TableColumn fx:id="columnjenissurat" prefWidth="141.6666259765625" text="jenis Surat" />
+                              <TableColumn fx:id="columnketerangansurat" prefWidth="134.33331298828125" text="keterangan" />
+                              <TableColumn fx:id="columntanggalsurat" prefWidth="111.0" text="tanggal" />
                            </columns>
                         </TableView>
                      </children>

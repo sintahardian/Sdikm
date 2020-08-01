@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.DashboardController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="562.0" prefWidth="985.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.TambahDataController">
    <children>
       <JFXButton fx:id="btnKeluarTambahData" buttonType="RAISED" layoutX="625.0" layoutY="21.0" prefHeight="45.0" prefWidth="77.0" style="-fx-background-color: red;" text="keluar" textFill="WHITE" AnchorPane.rightAnchor="40.0" AnchorPane.topAnchor="15.0" />
       <TabPane layoutY="81.0" prefHeight="481.0" prefWidth="734.0" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="80.0">
@@ -31,10 +31,10 @@
                                     <JFXTextField fx:id="fieldNama" prefHeight="25.0" prefWidth="208.0" />
                                  </children>
                               </HBox>
-                              <HBox fx:id="fieldNik" alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="523.0">
+                              <HBox alignment="CENTER_LEFT" prefHeight="33.0" prefWidth="523.0">
                                  <children>
                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="NIK" wrappingWidth="134.5234375" />
-                                    <JFXTextField prefHeight="25.0" prefWidth="209.0" />
+                                    <JFXTextField fx:id="fieldNik" prefHeight="25.0" prefWidth="209.0" />
                                  </children>
                               </HBox>
                               <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="10.0" prefHeight="33.0" prefWidth="523.0">
